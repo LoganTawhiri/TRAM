@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="TuwharetoaMaps.Pages.Map"
+             xmlns:local="clr-namespace:TuwharetoaMaps.Classes.CustomeRenderer"
              BackgroundColor="#212121">
     <!-- Title for page -->
     <NavigationPage.TitleView>
@@ -12,45 +13,22 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-
         <!-- Grid Creation -->
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="125"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-
+        <StackLayout>
             <!-- Topbar Navigation -->
-            <Grid Grid.ColumnSpan="5" BackgroundColor="#BABABA">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <FlexLayout Grid.Row="0" Grid.Column="1" AlignItems="Center" AlignContent="SpaceEvenly">
-                    <Image Source="tuwharetoa.png"/>
-                </FlexLayout>
-                <FlexLayout Grid.Row="1" Grid.ColumnSpan="3" AlignItems="End" 
-                        JustifyContent="SpaceEvenly" HeightRequest="125">
+            <StackLayout BackgroundColor="#BABABA">
+                <Image Source="tuwharetoa.png" WidthRequest="125"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="60">
                     <ImageButton Clicked="HomeClicked" Source="Home.png" HeightRequest="55" BackgroundColor="Transparent"/>
                     <ImageButton Clicked="MapClicked" Source="mappointer.png" HeightRequest="55" BackgroundColor="Transparent"/>
                     <ImageButton Clicked="NotificationsClicked" Source="bell.png" HeightRequest="55" BackgroundColor="Transparent"/>
-                </FlexLayout>
-            </Grid>
+                </StackLayout>
+            </StackLayout>
 
             <!-- Content of page -->
-            <StackLayout Grid.Row="1" Grid.ColumnSpan="5">
-                <maps:Map x:Name="myMap" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsShowingUser="True" />
+            <StackLayout>
+                <local:CustomMap x:Name="myMap" HeightRequest="815"/>
             </StackLayout>
-        </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
