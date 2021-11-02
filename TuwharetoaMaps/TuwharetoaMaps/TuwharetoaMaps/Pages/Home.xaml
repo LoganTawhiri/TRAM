@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuwharetoaMaps.Pages.Home"
+              BackgroundColor="#212121"
+             NavigationPage.HasBackButton="False">
+    <!-- Title for page -->
+    <NavigationPage.TitleView>
+        <FlexLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Label Text="Home" FontSize="22"/>
+        </FlexLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+
+        <!-- Grid Creation -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="125"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Topbar Navigation -->
+            <Grid Grid.ColumnSpan="5" BackgroundColor="#BABABA">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <FlexLayout Grid.Row="0" Grid.Column="1" AlignItems="Center" AlignContent="SpaceEvenly">
+                    <Image Source="tuwharetoa.png"/>
+                </FlexLayout>
+                <FlexLayout Grid.Row="1" Grid.ColumnSpan="3" AlignItems="End" 
+                        JustifyContent="SpaceEvenly" HeightRequest="125">
+                    <ImageButton Clicked="HomeClicked" Source="Home.png" HeightRequest="55" BackgroundColor="Transparent"/>
+                    <ImageButton Clicked="MapClicked" Source="mappointer.png" HeightRequest="55" BackgroundColor="Transparent"/>
+                    <ImageButton Clicked="NotificationsClicked" Source="bell.png" HeightRequest="55" BackgroundColor="Transparent"/>
+                </FlexLayout>
+            </Grid>
+
+            <!-- Content of page -->
+            <ScrollView Orientation="Vertical" Grid.Row="1" Grid.ColumnSpan="5">
+                <StackLayout HorizontalOptions="Start">
+                    <ContentView>
+                        <StackLayout>
+                            <Label Text="Welcome" FontSize="48" 
+                                FontAttributes="Bold" TextColor="White"
+                                Padding="10,0"/>
+                            <Label Text="This is a map application for the central region of New Zealand."
+                                FontSize="22" TextColor="White" Padding="10,0"/>
+                        </StackLayout>
+                    </ContentView>
+
+                    <!-- Recently Visited -->
+
+                    <ContentView>
+                        <StackLayout>
+                            <Label Text="Recently Visited" TextColor="White" 
+                                FontAttributes="Bold" FontSize="36"
+                                Padding="10,0"/>
+                            <FlexLayout BackgroundColor="#3f3f3f" JustifyContent="SpaceBetween" Padding="20,20">
+                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
+                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
+                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </ContentView>
+
+
+                    <!-- Recommendations -->
+
+                    <ContentView>
+                        <StackLayout>
+                            <Label Text="Recommendations" TextColor="White" 
+                                FontAttributes="Bold" FontSize="36"
+                                Padding="10,0"/>
+                            <FlexLayout BackgroundColor="#3f3f3f" JustifyContent="SpaceBetween" Padding="20,20">
+                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
+                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
+                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </ContentView>
+
+                    <ContentView>
+                        <Frame HeightRequest="400">
+                            <StackLayout>
+                                <ImageButton Source="map.png" HeightRequest="250" Aspect="AspectFill" Clicked="MapImageClicked"/>
+                                <Button Text="Go to Map" VerticalOptions="End" HeightRequest="100" Clicked="MapClicked"/>
+                            </StackLayout>
+                        </Frame>
+                    </ContentView>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
