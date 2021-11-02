@@ -60,7 +60,7 @@
 
                         <StackLayout>
                             <Grid Padding="0">
-                                <BoxView BackgroundColor="DarkGray" HeightRequest="1" Margin="50" HorizontalOptions="CenterAndExpand" WidthRequest="100"/>
+                                <BoxView BackgroundColor="White" HeightRequest="1" Margin="50" HorizontalOptions="CenterAndExpand" WidthRequest="100"/>
                                 <Frame BackgroundColor="White" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="30" HasShadow="False" BorderColor="DarkGray" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
                                     <Label Text="OR" TextColor="DarkGray" FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                 </Frame>
