@@ -50,7 +50,7 @@
 
                                 <StackLayout>
                                     <Label Text="Finished?" HorizontalOptions="Center"/>
-                                    <Button x:Name="BacktoMap" CornerRadius="10" HeightRequest="70" Text="Go Back to Map" BackgroundColor="#00c2bb" Clicked="BacktoMap_Clicked"/>
+                                    <Button x:Name="BacktoMap" CornerRadius="10" HeightRequest="70" Text="Go Back to Home" BackgroundColor="#00c2bb" Clicked="BacktoMap_Clicked"/>
                                 </StackLayout>
                             </StackLayout>
                         </ScrollView>

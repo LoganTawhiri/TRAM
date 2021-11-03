@@ -20,7 +20,7 @@ namespace TuwharetoaMaps.PinPages
 
         private async void BacktoMap_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Map());
+            await Navigation.PushAsync(new TabbedNav());
         }
     }
 }
