@@ -10,5 +10,4 @@
     <pages:Home Title="Home" IconImageSource="home.png"></pages:Home>
     <pages:Map Title="Map" IconImageSource="mappointer.png"></pages:Map>
     <pages:Accounts Title="Account" IconImageSource="profilepicture.png"></pages:Accounts>
-    <pages:Settings Title="Settings" IconImageSource="settings.png"></pages:Settings>
 </TabbedPage>

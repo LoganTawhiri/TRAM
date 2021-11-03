@@ -26,7 +26,7 @@
 
                                     </Frame>
 
-                                    <local:MyCustomEntry x:Name="Email" HorizontalOptions="FillAndExpand" Placeholder="Email" Margin="0,0,15,0"/>
+                                    <local:MyCustomEntry x:Name="EntryEmail" HorizontalOptions="FillAndExpand" Placeholder="Email" Margin="0,0,15,0"/>
                                 </StackLayout>
                             </Frame>
                             <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,20,0,0" Padding="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
@@ -35,7 +35,7 @@
 
                                     </Frame>
 
-                                    <local:MyCustomEntry x:Name="Password" IsPassword="True" HorizontalOptions="FillAndExpand" Placeholder="Password" Margin="0,0,15,0"/>
+                                    <local:MyCustomEntry x:Name="EntryPassword" IsPassword="True" HorizontalOptions="FillAndExpand" Placeholder="Password" Margin="0,0,15,0"/>
 
                                 </StackLayout>
                             </Frame>
@@ -53,8 +53,11 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                             <Label Text="Still Not Connected ? " HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                            <Label Text="Sign Up" HorizontalTextAlignment="Center" TextColor="#00c2bb" FontAttributes="Bold" VerticalTextAlignment="Center"/>
-
+                            <Label Text="Sign Up" HorizontalTextAlignment="Center" TextColor="#00c2bb" FontAttributes="Bold" VerticalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="SignUp_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
                         </StackLayout>
 
                         <StackLayout>

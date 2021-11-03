@@ -13,6 +13,10 @@ using Xamarin.Essentials;
 using TuwharetoaMaps.Classes.AuthHelpers;
 using Xamarin.Auth;
 using Newtonsoft.Json;
+using System.Windows.Input;
+using System.IO;
+using SQLite;
+using TuwharetoaMaps.Table;
 
 namespace TuwharetoaMaps.Pages
 {
@@ -30,14 +34,33 @@ namespace TuwharetoaMaps.Pages
         }
         private async void SignInBtn_Clicked(object sender, EventArgs e)
         {
-            if (Email.Text == "placeholder@gmail.com" && Password.Text == "password")
+            var dbpath = Path.Combine
+                (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
+            var db = new SQLiteConnection(dbpath);
+
+            var myquery = db.Table<RegUserTable>().Where(u => u.Email.Equals(EntryEmail.Text)
+            && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
+
+            if(myquery!=null)
             {
-                await Navigation.PushAsync(new TabbedNav());
+                App.Current.MainPage = new NavigationPage(new TabbedNav());
             }
             else
             {
-                await DisplayAlert("Incorrect Email or Password", "Please enter your credentials again", "OK");
-                await Navigation.PushAsync(new Login());
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var result = await this.DisplayAlert("Error", "User Credentials were incorrect please enter them again"
+                        , "Yes", "Cancel");
+
+                    if (result)
+                    {
+                        await Navigation.PushAsync(new Login());
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new Login());
+                    }
+                });
             }
         }
 
@@ -125,6 +148,11 @@ namespace TuwharetoaMaps.Pages
             }
 
             Debug.WriteLine("Authentication error: " + e.Message);
+        }
+
+        private async void SignUp_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Registration());
         }
     }
 }

@@ -2,49 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TuwharetoaMaps.Pages.Settings"
-             BackgroundColor="#212121">
-    <!-- Title for page -->
-    <NavigationPage.TitleView>
-        <FlexLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
-            <Label Text="Settings" FontSize="22"/>
-        </FlexLayout>
-    </NavigationPage.TitleView>
+             BackgroundColor="#e3e3e3">
 
-    <ContentPage.Content>
-        <!-- Grid Creation -->
+    <StackLayout Padding="0">
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="125"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Topbar Navigation -->
-            <!-- Content of page -->
-            <StackLayout Grid.Row="1" Grid.ColumnSpan="3">
-                <ContentView>
-                    <StackLayout Margin="10,10">
-                        <Label Text="Preferences" TextColor="White" FontSize="32" HorizontalTextAlignment="Center" Margin="0,0,0,50"/>
-
-                        <!-- Username Field -->
-                        <Label Text="Username" TextColor="White" FontSize="20"/>
-                        <Entry x:Name="userNameField" Placeholder="{x:Binding Email}"/>
-
-                        <!-- Bio -->
-                        <Label Text="Bio" TextColor="White" FontSize="20"/>
-                        <Entry x:Name="bioField" Placeholder="{x:Binding Bio}"/>
-
-                        <Button Text="Save" BackgroundColor="#00C2BB"></Button>
-                    </StackLayout>
-
-
-                </ContentView>
-
+            <StackLayout>
+                <Entry x:Name="RandomLabel" Margin="20"/>
+                <Switch x:Name="RandomSwitch" Margin="20" />
             </StackLayout>
         </Grid>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>
