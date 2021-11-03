@@ -15,15 +15,7 @@
     <ContentPage.Content>
         <!-- Grid Creation -->
         <StackLayout>
-            <!-- Topbar Navigation -->
-            <StackLayout BackgroundColor="#BABABA">
-                <Image Source="tuwharetoa.png" WidthRequest="125"/>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="60">
-                    <ImageButton Clicked="HomeClicked" Source="Home.png" HeightRequest="55" BackgroundColor="Transparent"/>
-                    <ImageButton Clicked="MapClicked" Source="mappointer.png" HeightRequest="55" BackgroundColor="Transparent"/>
-                    <ImageButton Clicked="NotificationsClicked" Source="bell.png" HeightRequest="55" BackgroundColor="Transparent"/>
-                </StackLayout>
-            </StackLayout>
+            <!-- Topbar Navigation -->          
 
             <!-- Content of page -->
             <StackLayout>

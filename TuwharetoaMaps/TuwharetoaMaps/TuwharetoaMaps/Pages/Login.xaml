@@ -5,7 +5,6 @@
              x:Class="TuwharetoaMaps.Pages.Login">
 
     <StackLayout Padding="0">
-
         <Grid>
             <StackLayout Padding="0" Margin="0">
                 <Frame BackgroundColor="#bababa" HeightRequest="110" HorizontalOptions="FillAndExpand">
@@ -67,11 +66,11 @@
                             </Grid>
 
                             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                <Frame BackgroundColor="White" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="20" HasShadow="False">
+                                <Frame BackgroundColor="Transparent" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="30" HasShadow="False">
                                     <ImageButton x:Name="GoogleLoginBtn" Source="GOOGLE.png" Aspect="AspectFill" Margin="0" Clicked="GoogleLoginBtn_Clicked" />
                                 </Frame>
 
-                                <Frame BackgroundColor="White" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="50" HasShadow="False">
+                                <Frame BackgroundColor="Transparent" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="30" HasShadow="False">
                                     <ImageButton x:Name="FBLoginBtn" Source="FB.png" Aspect="AspectFill" HeightRequest="50" Margin="0" />
                                 </Frame>
                             </StackLayout>

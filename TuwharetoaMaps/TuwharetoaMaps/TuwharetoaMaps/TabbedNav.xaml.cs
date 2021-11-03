@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TuwharetoaMaps;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TuwharetoaMaps.Pages
+namespace TuwharetoaMaps
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Settings : ContentPage
+    public partial class TabbedNav : TabbedPage
     {
-        public Settings()
+        public TabbedNav()
         {
             InitializeComponent();
         }

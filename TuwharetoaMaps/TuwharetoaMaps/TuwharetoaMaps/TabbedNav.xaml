@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:TuwharetoaMaps.Pages"
+            x:Class="TuwharetoaMaps.TabbedNav"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+             NavigationPage.HasBackButton="False"           
+            BarBackgroundColor="#bababa"
+            SelectedTabColor="Black">
+  <!--Pages can be added as references or inline-->
+    <pages:Home Title="Home" IconImageSource="home.png"></pages:Home>
+    <pages:Map Title="Map" IconImageSource="mappointer.png"></pages:Map>
+    <pages:Accounts Title="Account" IconImageSource="profilepicture.png"></pages:Accounts>
+    <pages:Settings Title="Settings" IconImageSource="settings.png"></pages:Settings>
+</TabbedPage>

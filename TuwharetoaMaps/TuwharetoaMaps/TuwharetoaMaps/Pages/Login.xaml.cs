@@ -32,7 +32,7 @@ namespace TuwharetoaMaps.Pages
         {
             if (Email.Text == "placeholder@gmail.com" && Password.Text == "password")
             {
-                await Navigation.PushAsync(new Home());
+                await Navigation.PushAsync(new TabbedNav());
             }
             else
             {
@@ -106,7 +106,7 @@ namespace TuwharetoaMaps.Pages
 
                 if (user != null)
                 {
-                    App.Current.MainPage = new NavigationPage(new Home());
+                    App.Current.MainPage = new NavigationPage(new TabbedNav());
 
                 }
 

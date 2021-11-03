@@ -136,20 +136,5 @@ namespace TuwharetoaMaps.Pages
             myMap.Pins.Add(pin11);
             #endregion
         }
-
-        #region Navigation
-        private async void HomeClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Home());
-        }
-        private async void MapClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Map());
-        }
-        private async void NotificationsClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Notifications());
-        }
-        #endregion
     }
 }

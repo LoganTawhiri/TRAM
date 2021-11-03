@@ -34,10 +34,10 @@
     <EmbeddedResource Update="Pages\Map.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Notifications.xaml">
+    <EmbeddedResource Update="Pages\Settings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Settings.xaml">
+    <EmbeddedResource Update="TabbedNav.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

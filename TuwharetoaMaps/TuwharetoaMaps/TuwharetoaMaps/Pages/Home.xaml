@@ -2,107 +2,52 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TuwharetoaMaps.Pages.Home"
-              BackgroundColor="#212121"
+              BackgroundColor="#e3e3e3"
              NavigationPage.HasBackButton="False">
     <!-- Title for page -->
-    <NavigationPage.TitleView>
+    <!--<NavigationPage.TitleView>
         <FlexLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
             <Label Text="Home" FontSize="22"/>
         </FlexLayout>
-    </NavigationPage.TitleView>
+    </NavigationPage.TitleView>-->
 
-    <ContentPage.Content>
-
-        <!-- Grid Creation -->
+    <StackLayout Padding="0">
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="125"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
+            <StackLayout Padding="0" Margin="0">
+                <Frame BackgroundColor="#e3e3e3" HeightRequest="20" HorizontalOptions="FillAndExpand">
+                    <Label Text="Welcome" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center">
 
-            <!-- Topbar Navigation -->
-            <Grid Grid.ColumnSpan="5" BackgroundColor="#BABABA">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <FlexLayout Grid.Row="0" Grid.Column="1" AlignItems="Center" AlignContent="SpaceEvenly">
-                    <Image Source="tuwharetoa.png"/>
-                </FlexLayout>
-                <FlexLayout Grid.Row="1" Grid.ColumnSpan="3" AlignItems="End" 
-                        JustifyContent="SpaceEvenly" HeightRequest="125">
-                    <ImageButton Clicked="HomeClicked" Source="Home.png" HeightRequest="55" BackgroundColor="Transparent"/>
-                    <ImageButton Clicked="MapClicked" Source="mappointer.png" HeightRequest="55" BackgroundColor="Transparent"/>
-                    <ImageButton Clicked="NotificationsClicked" Source="bell.png" HeightRequest="55" BackgroundColor="Transparent"/>
-                </FlexLayout>
-            </Grid>
-
-            <!-- Content of page -->
-            <ScrollView Orientation="Vertical" Grid.Row="1" Grid.ColumnSpan="5">
-                <StackLayout HorizontalOptions="Start">
-                    <ContentView>
-                        <StackLayout>
-                            <Label Text="Welcome" FontSize="48" 
-                                FontAttributes="Bold" TextColor="White"
-                                Padding="10,0"/>
-                            <Label Text="This is a map application for the central region of New Zealand."
-                                FontSize="22" TextColor="White" Padding="10,0"/>
-                        </StackLayout>
-                    </ContentView>
-
-                    <!-- Recently Visited -->
-
-                    <ContentView>
-                        <StackLayout>
-                            <Label Text="Recently Visited" TextColor="White" 
-                                FontAttributes="Bold" FontSize="36"
-                                Padding="10,0"/>
-                            <FlexLayout BackgroundColor="#3f3f3f" JustifyContent="SpaceBetween" Padding="20,20">
-                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
-                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
-                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
-                            </FlexLayout>
-                        </StackLayout>
-                    </ContentView>
-
-
-                    <!-- Recommendations -->
-
-                    <ContentView>
-                        <StackLayout>
-                            <Label Text="Recommendations" TextColor="White" 
-                                FontAttributes="Bold" FontSize="36"
-                                Padding="10,0"/>
-                            <FlexLayout BackgroundColor="#3f3f3f" JustifyContent="SpaceBetween" Padding="20,20">
-                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
-                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
-                                <ImageButton Source="hotpools.png" HeightRequest="100" BackgroundColor="Transparent"/>
-                            </FlexLayout>
-                        </StackLayout>
-                    </ContentView>
-
-                    <ContentView>
-                        <Frame HeightRequest="400">
+                    </Label>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="0" Margin="0">
+                <CarouselView ItemsSource="{Binding Locations}" Loop="True">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
                             <StackLayout>
-                                <ImageButton Source="map.png" HeightRequest="250" Aspect="AspectFill" Clicked="MapImageClicked"/>
-                                <Button Text="Go to Map" VerticalOptions="End" HeightRequest="100" Clicked="MapClicked"/>
+                                <Frame HasShadow="True" BorderColor="DarkGray" 
+                                       CornerRadius="10" Margin="10" HeightRequest="450"
+                                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                    <StackLayout>
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" 
+                                               HorizontalOptions="Center" VerticalOptions="Center" />
+                                        <Image Source="{Binding Image}" Aspect="AspectFill" 
+                                               HeightRequest="100" WidthRequest="100"
+                                               HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Address}"/>
+                                        <Label Text="{Binding Details}"/>
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
-                        </Frame>
-                    </ContentView>
-                </StackLayout>
-            </ScrollView>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <!--<Frame BackgroundColor="White" HasShadow="True" HeightRequest="450" HorizontalOptions="FillAndExpand">
+                    
+
+                </Frame>--> 
+
+            </StackLayout>
         </Grid>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>
