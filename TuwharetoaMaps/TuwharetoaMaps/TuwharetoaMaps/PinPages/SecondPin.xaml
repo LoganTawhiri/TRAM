@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuwharetoaMaps.PinPages.SecondPin"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="mtruapehu.jpg"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+               
+                <Frame Grid.Column="1" CornerRadius="20" Margin="0,-50" BackgroundColor="#e3e3e3" Padding="10,0,10,60">
+                    <StackLayout>
+                        <ScrollView VerticalScrollBarVisibility="Never">
+                            <StackLayout>
+                                <Label Text="Mt Ruapehu" HorizontalOptions="Center" FontSize="64" FontAttributes="Bold"/>
+                                <!-- Skiiing/Snowboarding -->
+                                <Label Text="Activities" HorizontalOptions="Center" FontSize="38" FontAttributes="Bold"/>
+                                <!-- Whakapapa Ski Field Info -->
+                                <Label Text="Whakapapa Ski Field" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="whakapapa.jpg"/>
+
+                                <!-- Turoa Ski Field Info -->
+                                <Label Text="Turoa Ski Field" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="turoa.jfif"/>
+                                
+                                <!-- Tukino Ski Field Info -->
+                                <Label Text="Tukino Ski Field" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="tukino.jpg"/>
+
+                                <!-- Tongariro Alpine Crossing -->
+                                <Label Text="Tongariro Alpine Crossing" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="tongariroAC.jpg"/>
+
+                                <!-- Ketetahi Falls -->
+                                <Label Text="Ketetahi Falls" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="ketetahifalls.jpg"/>
+
+                                <!-- Tawhai Falls -->
+                                <Label Text="Tawhai Falls" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="tawhaifalls.jpg"/>
+
+                                <StackLayout>
+                                    <Label Text="Finished?" HorizontalOptions="Center"/>
+                                    <Button x:Name="BacktoMap" CornerRadius="10" HeightRequest="70" Text="Go Back to Map" BackgroundColor="#00c2bb" Clicked="BacktoMap_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

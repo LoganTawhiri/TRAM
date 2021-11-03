@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuwharetoaMaps.PinPages.ThirdPin"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="tokaanu.jpg"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="1" CornerRadius="20" Margin="0,-50" BackgroundColor="#e3e3e3" Padding="10,0,10,60">
+                    <StackLayout>
+                        <ScrollView VerticalScrollBarVisibility="Never">
+                            <StackLayout>
+                                <!-- Title -->
+                                <Label Text="Tokaanu" HorizontalOptions="Center" FontSize="64" FontAttributes="Bold"/>
+                                
+                                <!-- Activities Title -->
+                                <Label Text="Activities" FontSize="38" HorizontalOptions="Center"/>
+
+                                <!-- Tokaanu Thermal Pools -->
+                                <Label Text="Tokaanu Thermal Pools" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="TTP.jpg"/>
+
+                                <!-- Tokaanu Thermal Walk -->
+                                <Label Text="Tokaanu Thermal Walk" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="TTW.jpg"/>
+
+                                <!-- Tokaanu Historic Wharf -->
+                                <Label Text="Tokaanu Historic Wharf" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="tokaanuHW.jpg"/>
+
+                                <!-- Mosquito Hill -->
+                                <Label Text="Maunganamu (Mosquito Hill)" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="mosquitohill.jpg"/>
+
+                                <StackLayout>
+                                    <Label Text="Finished?" HorizontalOptions="Center"/>
+                                    <Button x:Name="BacktoMap" CornerRadius="10" HeightRequest="70" Text="Go Back to Map" BackgroundColor="#00c2bb" Clicked="BacktoMap_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

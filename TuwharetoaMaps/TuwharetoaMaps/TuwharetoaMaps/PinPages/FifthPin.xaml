@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuwharetoaMaps.PinPages.FifthPin"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="laketaupo.jpg"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="1" CornerRadius="20" Margin="0,-50" BackgroundColor="#e3e3e3" Padding="10,0,10,60">
+                    <StackLayout>
+                        <ScrollView VerticalScrollBarVisibility="Never">
+                            <StackLayout>
+                                <!-- Title -->
+                                <Label Text="Lake Taupo" HorizontalOptions="Center" FontSize="64" FontAttributes="Bold"/>
+
+                                <!-- Activities Title -->
+                                <Label Text="Activities" FontSize="38" HorizontalOptions="Center"/>
+
+                                <!-- Big Sky Parasailing -->
+                                <Label Text="Big Sky Parasail" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="parasaillaketaupo.jpg"/>
+
+                                <!-- Swimming -->
+                                <Label Text="Swimming" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="swimming.jpg"/>
+
+                                <!-- Fishing -->
+                                <Label Text="Fishing" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="fishing.jpg"/>
+
+                                <!-- Bulli Point -->
+                                <Label Text="Bulli Point" FontSize="24"/>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                <Image Source="bullipoint.jpg"/>
+
+                                <StackLayout>
+                                    <Label Text="Finished?" HorizontalOptions="Center"/>
+                                    <Button x:Name="BacktoMap" CornerRadius="10" HeightRequest="70" Text="Go Back to Map" BackgroundColor="#00c2bb" Clicked="BacktoMap_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

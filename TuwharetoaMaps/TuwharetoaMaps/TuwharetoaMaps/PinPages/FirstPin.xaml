@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuwharetoaMaps.PinPages.FirstPin"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="turangi.jpg"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="1" CornerRadius="20" Margin="0,-50" BackgroundColor="#e3e3e3" Padding="10,0,10,60">
+                    <StackLayout>
+                        <ScrollView VerticalScrollBarVisibility="Never">
+                            <StackLayout>
+                                <!-- Title -->
+                                <Label Text="Turangi" HorizontalOptions="Center" FontSize="64" FontAttributes="Bold"/>
+                                
+                                <!-- Activities Title -->
+                                <Label Text="Activities" FontSize="38" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                
+                                <!-- Tongariro River Rafting -->
+                                <Label Text="Tongariro River Rafting" FontSize="32" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="We are the most experienced white water rafting provider in the Taupō region, and proud to be the absolute #1 Rated Rafting experience in the entire North Island on Trip Advisor." FontSize="20"/>
+                                <Label Text="Why choose us?" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="We're number one on TripAdvisor, and have had over 200,00 customers. Here's exactly why Tongariro River Rafting give you the best Taupo white water rafting experience." FontSize="20"/>
+                                <Label Text="Guaranteed Departures!" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Doesn't it suck to receive a call to say your eagerly-awaited adventure activity has been cancelled due to low numbers?&#10;&#10;That's why we won't do this to you – ever.&#10;&#10;If you have reserved a trip with us, your departure is guaranteed. So you can go ahead and book with confidence.&#10;&#10;We would only cancel your trip if there were severe weather conditions. Your safety comes first!&#10;&#10;If this does happen (it's pretty rare), we'll make every effort to get you out on the river when conditions improve.&#10;&#10;Rafting the Tongariro River is a year-round activity. A bit of rain won't stop us, we'll be getting wet anyway!&#10;&#10;So if you have booked a local weather-dependent activity and it has been cancelled (such as the Tongariro Crossing or a skiing at Mt Ruapehu) give us a call – we're an awesome alternative." FontSize="20"/>
+                                <Label Text="Pricing" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Adults: $159.00&#10;Children(16 years &amp; under):$144.00" FontSize="20"/>
+                                <Label Text="Departure Times" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="SUMMER (Nov 1 - March 31): 9AM - 2PM&#10;APRIL (April 1 - April 30): 9AM - 1PM&#10;WINTER (May 1 - Oct 31): 12PM Noon" FontSize="20"/>
+                                <Label Text="Departure Point" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="The Rafting Centre, 95 Atirau Road, Turangi" FontSize="20"/>
+                                <Label Text="What you need to bring" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Swimwear, towel, a sense of adventure! We will provide everything else including wetsuits. river shoes, helmets, life jackets etc." FontSize="20"/>
+                                <Image Source="tongariroRR.jpg"/>
+                                
+                                <!-- Rafting New Zealand -->
+                                <Label Text="Rafting New Zealand" FontSize="32" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="New Zealand's best Grade 3 rafting adventure happens just a few minutes outside of Turangi on the upper reaches of the Tongariro River – the best place to whitewater raft." FontSize="20"/>
+                                <Label Text="Most Awarded Rafting Company" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Voted best Rafting Company in NZ since 2010!&#10;&#10;We were the first rafting company to fain the internationally recognised GOLD Qualmark Award for excellence in safety and service.&#10;&#10;Adventure Mark Certified, which means our rigorous safety audits ensure you and your family are in the best hands in the business." FontSize="20"/>
+                                <Label Text="Celebrating 30 Years of Rafting the Tongariro River - 1991 - 2021" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Based in Turangi and Taupo, Rafting New Zealand has been operating for over 25 years rafting the Tongariro River and is New Zealand's most awarded rafting Company.&#10;&#10;Maori owned and operated, Rafting New Zealand offer several Family Rafting and Trout Fishing adventures for ages 3 &amp; up around Taupo and Turangi.&#10;&#10;Rafting New Zealand love to raft and love to share their passion for rafting the Tongariro River with all their clients, this enthusiasm for their excellent product is infectious and helps to create the unique experience that is white water rafting with Rafting New Zealand.experience the thrill of rafting on the mighty Tongariro River." FontSize="20"/>
+                                <Label Text="Pricing" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Adults: $179.00&#10;Children(Ages 10 - 17): $149.00" FontSize="20"/>
+                                <Label Text="What's Included" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="&#x2022; All On-river Apparel &amp; Rafting Equipment&#10;&#x2022; Full safety briefing&#10;&#x2022; Hot drinks (Hot chocolate) &amp; snacks&#10;&#x2022; Hot showers &amp; heated changing rooms&#10;&#x2022; River dog (hotdog) provided for everyone. (Vegetarian option available)&#10;&#x2022; Beer for adults, soda for children" FontSize="20"/>
+                                <Image Source="raftingNZ.jpg"/>
+
+                                <!-- Tongariro National Trout Centre -->
+                                <Label Text="Tongariro National Trout Centre" FontSize="32" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="Come and visit our freshwater centre where you can feed our beautiful rainbow trout, learn about conservation and our native fish and maybe see a Kereru, Tui or a Whio on the Tongariro River" FontSize="20"/>
+                                <Label Text="Attractions" FontSize="28" FontAttributes="Bold"/>
+                                <Label Text="Native Aquarium" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="View one of New Zealands best collections of native freshwater fish. Our aquarium has Giant Kokopu, Koura, Tuna and Koaro to name a few species endemic to Aotearoa. Our local ika can be very shy and are especially adept at camouflage or hiding in their environment. Come and see if you can spot them." FontSize="20"/>
+                                <Label Text="Flyfishing Museum" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Learn about the history of Trout and Fly fishing on the Tongariro River, one of the best fishing rivers in the world. Rainbow Trout were introduced to New Zealand around the turn of the century and have been challenging anglers from all over the world who come here to try and catch them." FontSize="20"/>
+                                <Label Text="Rainbow Trout Hatchery" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Walk through the original hatchery building and see where millions of trout fry were raised. Built in the early 1920s to grow trout populations, the facility is now used to provide a sustainable supply of trout for the childrens fishing pond, giving kids a chance to try their hand at fly fishing and catch their first Rainbow Trout." FontSize="20"/>
+                                <Label Text="Pricing" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Adults: $15&#10;Children(under 16): FREE&#10;Seniors: $12" FontSize="20"/>
+                                <Image Source="troutcentre.jpg"/>
+
+                                <!-- Tongariro River Track -->
+                                <Label Text="Tongariro River Track" FontSize="32" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="Follow the banks of the Tongariro River alongside farmland and through native bush and urban areas, and enjoy magnificent river views - it's an easy, mainly flat track with multiple entry points so a great option for children." FontSize="20"/>
+                                <Label Text="Information" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="&#x2022; 15km loop.&#10;&#x2022; Walking &amp; Tramping takes 2 - 3 hours, Easy: Walking track.&#10;&#x2022; Mountain biking takes 30 - 1hr 30min, Easy: Grade 2.&#10;&#x2022; Dog access: Dogs are allowed, however please keep your dog under control at all times." FontSize="20"/>
+                                <Label Text="Description" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="An easy, mainly flat track suitable for families and casual riders. It can be enjoyed in any direction, and started at a number of different points. This means shorter routes can be tailored to suit your particular needs.&#10;&#10;There is only one major climb on the trail, up to the Tongariro River Lookout at the northern end of the loop – well worth the effort when you reach the top and take in the view of the river, set against the backdrop of the mountains in the Tongariro National Park.&#10;&#10;From the high banks above the river, there are excellent views of the river's calm pools and rippling rapids. Keep an eye out for trout or watch the fly fishing action - the Tongariro River is a world renowned fishery." FontSize="20"/>
+                                <Image Source="tongarirorivertrail.jpg"/>
+
+                                <!-- Lake Rotopounamu -->
+                                <Label Text="Lake Rotopounamu" FontSize="32" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="This track circles a beautiful lake surrounded by native forest and is a special favourite of tree lovers, birdwatchers, and families." FontSize="20"/>
+                                <Label Text="Information" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="&#x2022; 5km loop.&#10;&#x2022; Walking &amp; Tramping takes 2 hours, Easy: Walking track.&#10;&#x2022; Dog access: No dogs allowed." FontSize="20"/>
+                                <Label Text="Description" FontSize="24" FontAttributes="Bold"/>
+                                <Label Text="Beginning opposite the parking area, the track winds gently uphill to the track junction. To walk around the lake, turn right and follow a short section of gravelled track before dropping down towards Five Minute Beach. Here a broad tree stump provides a good spot to view the lake.&#10;&#10;A Long Beach sweeps along the eastern side of the lake and is an ideal spot for a picnic or rest stop. There is a toilet here.&#10;&#10;The track continues to the northern shore where three of the lake's four tributary streams enter the lake. The lake usually has no visible outflow, however when the water levels are low a small outflow can be seen near the shore on the southern side of the lake.&#10;&#10;Continuing on, you pass Ten Minute Beach and soon return to the track junction. From here it's downhill to the carpark. Allow two hours for a leisurely walk around the lake." FontSize="20"/>
+                                <Image Source="lakerotopounamu.jpg"/>
+
+                                <StackLayout>
+                                    <Label Text="Finished?" HorizontalOptions="Center"/>
+                                    <Button x:Name="BacktoMap" CornerRadius="10" HeightRequest="70" Text="Go Back to Map" BackgroundColor="#00c2bb" Clicked="BacktoMap_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
