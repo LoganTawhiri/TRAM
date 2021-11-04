@@ -4,12 +4,31 @@
              x:Class="TuwharetoaMaps.Pages.Settings"
              BackgroundColor="#e3e3e3">
 
-    <StackLayout Padding="0">
-        <Grid>
-            <StackLayout>
-                <Entry x:Name="RandomLabel" Margin="20"/>
-                <Switch x:Name="RandomSwitch" Margin="20" />
-            </StackLayout>
-        </Grid>
-    </StackLayout>
+    <ContentPage.Content>
+        <!-- Content of page -->
+        <StackLayout>
+            <ContentView>
+                <StackLayout>
+                    <StackLayout Padding="0" Margin="0">
+                        <Frame HeightRequest="20" HorizontalOptions="FillAndExpand">
+                            <Label Text="Preferences" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                        </Frame>
+                    </StackLayout>
+                    
+                    <StackLayout Margin="10,150,10,0">
+                        <!-- Username Field -->
+                        <Label Text="Name" TextColor="Black" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Entry x:Name="RandomName" TextColor="Black"/>
+
+                        <!-- Bio -->
+                        <Label Text="Bio" TextColor="Black" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Entry x:Name="RandomBio" TextColor="Black"/>
+
+                        <Button x:Name="SaveBtn" Text="Save" BackgroundColor="#00C2BB" Clicked="SaveBtn_Clicked" CornerRadius="5"/>
+                        <Button x:Name="ReturnHome" Text="Return To Home" BackgroundColor="#00c2bb" Clicked="ReturnHome_Clicked" CornerRadius="5"/>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

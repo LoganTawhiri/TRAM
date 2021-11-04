@@ -19,7 +19,7 @@
 
             <!-- Content of page -->
             <StackLayout>
-                <local:CustomMap x:Name="myMap" HeightRequest="815"/>
+                <local:CustomMap x:Name="myMap" HeightRequest="890"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

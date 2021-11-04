@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TuwharetoaMaps;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +16,17 @@ namespace TuwharetoaMaps.Pages
         public Settings()
         {
             InitializeComponent();
+        }
+
+        private void SaveBtn_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Set("RandomName", RandomName.Text);
+            Preferences.Set("RandomBio", RandomBio.Text);
+        }
+
+        private async void ReturnHome_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TabbedNav());
         }
     }
 }
