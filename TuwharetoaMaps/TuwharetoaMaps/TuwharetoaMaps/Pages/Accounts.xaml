@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="TuwharetoaMaps.Pages.Accounts">
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="malamute.jpg" Aspect="AspectFill" HeightRequest="630"/>
+            <Image x:Name="resultImage" Source="malamute.jpg" Aspect="AspectFill" HeightRequest="630"/>
             <Frame HasShadow="False" CornerRadius="40" Margin="0,-110,0,0" VerticalOptions="FillAndExpand">
                 <ScrollView>
                     <StackLayout>
                         <Label x:Name="RandomName" FontSize="64" HorizontalOptions="Center"/>
-                        <Label x:Name="RandomBio"  FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="RandomBio" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Button x:Name="ImageEditBtn" Clicked="ImageEditBtn_Clicked" Text="Change Profile Picture" BackgroundColor="#00c2bb" CornerRadius="40" HeightRequest="70" VerticalOptions="EndAndExpand"/>
                         <Button x:Name="Editbtn" Clicked="Editbtn_Clicked" Text="Edit Profile" BackgroundColor="#00c2bb" CornerRadius="40" HeightRequest="70" VerticalOptions="EndAndExpand"/>
+                        <Button x:Name="logoutBtn" Clicked="logoutBtn_Clicked" Text="Logout" BackgroundColor="#00c2bb" CornerRadius="40" HeightRequest="70" VerticalOptions="EndAndExpand"/>
                     </StackLayout>
                 </ScrollView>
             </Frame>
